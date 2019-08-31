@@ -1,0 +1,48 @@
+#Jawaban Soal No. 6A, menggunakan MySQL
+
+#Membuat Tabel Nama
+CREATE TABLE Names
+(
+	id			smallint(2),
+	name		VARCHAR(15),
+	id_work		smallint(2),
+	id_salary	smallint(2)
+);
+
+INSERT INTO Names
+	VALUE(1, "Rebecca", 1, 1);
+INSERT INTO Names
+	VALUE(2, "Vita", 2, 2);
+
+#Membuat tabel Works
+CREATE TABLE Works
+(
+	id 			smallint(2),
+	work		VARCHAR(20),
+	id_salary	smallint(2)
+);
+
+INSERT INTO Works
+	VALUE(1, "FrontendDev", 1);
+INSERT INTO Works
+	VALUE(2, "BackendDev", 2);
+
+#Membuat tabel Kategori
+CREATE TABLE Kategori
+(
+	id 		smallint(2),
+	salary 	VARCHAR(15)
+);
+
+INSERT INTO Work
+	VALUE(1, 10,000,000);
+INSERT INTO Work
+	VALUE(2, 12,000,000);
+
+#Menampilkan tabel yang diminta
+SELECT name, Pekerjaan, Salary
+FROM names n
+	JOIN works w
+		ON n.id=w.id
+	JOIN kategori k
+		ON w.id=k.id;
